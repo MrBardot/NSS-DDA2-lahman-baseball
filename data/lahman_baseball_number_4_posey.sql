@@ -22,7 +22,7 @@ WITH fielding_group AS (SELECT playerid, pos, po AS putouts,
 					   FROM fielding
 					   WHERE yearid = '2016'
 					   GROUP BY playerid,pos,po) 
-SELECT field_position, COUNT(putouts) AS putouts
+SELECT field_position, SUM(putouts) AS putouts
 FROM fielding_group
 GROUP BY field_position
 ORDER BY putouts DESC;
