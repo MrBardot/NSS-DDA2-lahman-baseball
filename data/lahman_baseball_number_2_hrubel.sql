@@ -1,5 +1,5 @@
 /*2*/
-SELECT people.namegiven, people.height, teams.name AS team, teams.g AS games_played
+SELECT people.namegiven, people.height, teams.name AS team, appearances.g_all AS games_played
 FROM people
 JOIN appearances
 ON people.playerid = appearances.playerid
