@@ -24,7 +24,8 @@ WITH fielding_group AS (SELECT playerid, pos, po AS putouts,
 					   GROUP BY playerid,pos,po) 
 SELECT field_position, COUNT(putouts) AS putouts
 FROM fielding_group
-GROUP BY field_position;
+GROUP BY field_position
+ORDER BY putouts DESC;
 	
 						
 SELECT playerid, pos, po AS putouts,
